@@ -1,7 +1,0 @@
-C:\Users\Kevin\Documents\github\aldriguz\wikimedia-pageviews\WikimediaPageviewsData\WikimediaData.Core\bin\Debug\WikimediaData.Core.exe.config
-C:\Users\Kevin\Documents\github\aldriguz\wikimedia-pageviews\WikimediaPageviewsData\WikimediaData.Core\bin\Debug\WikimediaData.Core.exe
-C:\Users\Kevin\Documents\github\aldriguz\wikimedia-pageviews\WikimediaPageviewsData\WikimediaData.Core\bin\Debug\WikimediaData.Core.pdb
-C:\Users\Kevin\Documents\github\aldriguz\wikimedia-pageviews\WikimediaPageviewsData\WikimediaData.Core\obj\Debug\WikimediaData.Core.csprojAssemblyReference.cache
-C:\Users\Kevin\Documents\github\aldriguz\wikimedia-pageviews\WikimediaPageviewsData\WikimediaData.Core\obj\Debug\WikimediaData.Core.csproj.CoreCompileInputs.cache
-C:\Users\Kevin\Documents\github\aldriguz\wikimedia-pageviews\WikimediaPageviewsData\WikimediaData.Core\obj\Debug\WikimediaData.Core.exe
-C:\Users\Kevin\Documents\github\aldriguz\wikimedia-pageviews\WikimediaPageviewsData\WikimediaData.Core\obj\Debug\WikimediaData.Core.pdb

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikimediaData.Core", "WikimediaData.Core\WikimediaData.Core.csproj", "{637214A5-F316-4673-BB40-6071D4A3B128}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{637214A5-F316-4673-BB40-6071D4A3B128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{637214A5-F316-4673-BB40-6071D4A3B128}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{637214A5-F316-4673-BB40-6071D4A3B128}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{637214A5-F316-4673-BB40-6071D4A3B128}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B55AD7F-8F9E-4772-BF6A-7DCB121CFB50}
+	EndGlobalSection
+EndGlobal

@@ -41,6 +41,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Text.Encoding.CodePages, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.Encoding.CodePages.4.0.1\lib\net46\System.Text.Encoding.CodePages.dll</HintPath>
     </Reference>
@@ -56,6 +57,7 @@
     <Compile Include="Core\ConsoleReport.cs" />
     <Compile Include="Data\CollectionsData.cs" />
     <Compile Include="Entities\Config.cs" />
+    <Compile Include="Entities\Enums\EnumDomain.cs" />
     <Compile Include="Entities\LanguageDomain.cs" />
     <Compile Include="Entities\LanguageDomainReport.cs" />
     <Compile Include="Entities\LanguagePage.cs" />

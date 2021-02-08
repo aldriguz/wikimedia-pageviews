@@ -13,8 +13,14 @@ namespace WikimediaData.Data
         {
             LanguageDomain report = new LanguageDomain();
 
+            var topEntry = periodCollection.Data.Where(x => x.ViewCount > 0)
+                                .OrderByDescending(x => x.ViewCount)
+                                .FirstOrDefault();
 
 
+            report.Domain = ""; //GetDomain
+            report.LanguageCode = "";
+            report.ViewCount = topEntry.ViewCount;
 
             return report;
         }

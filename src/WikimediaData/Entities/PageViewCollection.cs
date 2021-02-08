@@ -8,7 +8,7 @@ namespace WikimediaData.Entities
 {
     public class PageViewCollection
     {
-        private List<PageViewEntry> Data;
+        public List<PageViewEntry> Data;
         private DateTime? PeriodDate;
         public string StrPeriodDate;
 

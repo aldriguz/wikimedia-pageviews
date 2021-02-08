@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using WikimediaData.Library;
-using WikimediaData.Library.FileLib;
+using WikimediaData;
+using WikimediaData.FileLib;
 
-namespace WikimediaData.Core
+namespace WikimediaData
 {
     class Program
     {

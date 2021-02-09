@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikimediaData", "WikimediaData\WikimediaData.csproj", "{637214A5-F316-4673-BB40-6071D4A3B128}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikimediaData.Tests", "WikimediaData.Tests\WikimediaData.Tests.csproj", "{3C005DCC-AB75-483F-A4C1-52028DCC4FF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WikimediaDataTests", "WikimediaDataTests\WikimediaDataTests.csproj", "{31CAD7AC-D579-4633-B716-9C959D4C6BC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{637214A5-F316-4673-BB40-6071D4A3B128}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{637214A5-F316-4673-BB40-6071D4A3B128}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{637214A5-F316-4673-BB40-6071D4A3B128}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3C005DCC-AB75-483F-A4C1-52028DCC4FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3C005DCC-AB75-483F-A4C1-52028DCC4FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3C005DCC-AB75-483F-A4C1-52028DCC4FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3C005DCC-AB75-483F-A4C1-52028DCC4FF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31CAD7AC-D579-4633-B716-9C959D4C6BC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31CAD7AC-D579-4633-B716-9C959D4C6BC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31CAD7AC-D579-4633-B716-9C959D4C6BC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31CAD7AC-D579-4633-B716-9C959D4C6BC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

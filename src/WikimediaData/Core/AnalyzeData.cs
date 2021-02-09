@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WikimediaData.Compression;
 using WikimediaData.Data;
 using WikimediaData.Entities;
@@ -28,13 +24,6 @@ namespace WikimediaData.Core
             this.StartPeriod = startPeriod;
         }
         #endregion
-
-        public PageViewCollection GetContentByPeriod(DateTime periodDate)
-        {
-            PageViewCollection entries = new PageViewCollection();
-
-            return entries;
-        }
 
         public void RunMainProcess()
         {

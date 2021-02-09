@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WikimediaData.Entities;
 using WikimediaData.Interfaces;
 
@@ -11,11 +8,13 @@ namespace WikimediaData.Data
     public class CollectionsData
     {
         private readonly IDomainData domainData;
-
+        
+        #region constructor
         public CollectionsData(IDomainData domainData) 
         {
             this.domainData = domainData;
         }
+        #endregion
 
         public LanguageDomain GetLanguageAndDomainCount(PageViewCollection periodCollection)
         {

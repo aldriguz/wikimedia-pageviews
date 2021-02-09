@@ -87,7 +87,6 @@
     <Compile Include="Data\InMemoryDomainData.cs" />
     <Compile Include="Entities\Config.cs" />
     <Compile Include="Entities\Domain.cs" />
-    <Compile Include="Entities\Enums\EnumDomain.cs" />
     <Compile Include="Entities\LanguageDomain.cs" />
     <Compile Include="Entities\LanguageDomainReport.cs" />
     <Compile Include="Entities\LanguagePage.cs" />
@@ -102,10 +101,7 @@
     <Compile Include="Interfaces\IPageViewRule.cs" />
     <Compile Include="Library\Compression\GZip.cs" />
     <Compile Include="Library\FileFormat\FileReader.cs" />
-    <Compile Include="Other\DataRaw.cs" />
-    <Compile Include="Other\Download.cs" />
     <Compile Include="Library\FileFormat\FileProvider.cs" />
-    <Compile Include="Other\Read.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Library\ProgressBar\ProgressBar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

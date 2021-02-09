@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace WikimediaData.Entities
 {
     public class LanguagePageReport
     {
         public List<LanguagePage> Data { get; set; }
-
-        public string ProcessIdentifier { get; set; }
 
         public LanguagePageReport()
         {

@@ -1,13 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
+using System.Collections.Generic;
 using WikimediaData.Entities;
 using WikimediaData.Interfaces;
-using System.Linq;
 
 namespace WikimediaData.Data
 {
     public class InMemoryDomainData : IDomainData
     {
         private readonly List<Domain> domains;
+
+        #region constructor
         public InMemoryDomainData()
         {
             domains = new List<Domain>()
@@ -27,7 +29,7 @@ namespace WikimediaData.Data
                 new Domain { Id = 13, Name = "Wikidata", Code = "wd", TrailingPart = ".wikidata.org"}
             };
         }
-
+        #endregion
 
         public IEnumerable<Domain> GetAllDomains()
         {

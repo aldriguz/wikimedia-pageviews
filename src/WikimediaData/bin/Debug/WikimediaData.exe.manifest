@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WikimediaData.exe" size="28632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WikimediaData.exe" size="24536">
       <assemblyIdentity name="WikimediaData" version="0.2.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>7KgOj4yJ6Vk8X0Sj96N+A1wDU7NS9sSy1mDAnJofKUU=</dsig:DigestValue>
+        <dsig:DigestValue>fVpLDV9t0EU+X6UWeChoy7a5ISyeXTn7PMkSlOeoVBE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -17,9 +17,12 @@ namespace WikimediaData
         {
             DateTime currentPeriod = DateTime.Now.ToUniversalTime();
             int lastDaysNumber = 5;
+
             AnalyzeData dataProcessor = new AnalyzeData(lastDaysNumber, currentPeriod);
             dataProcessor.RunMainProcess();
-            //ProcessTest();
+
+            Console.WriteLine("Press enter to quit.");
+            Console.ReadLine();
         }
 
         public static void ProcessTest()

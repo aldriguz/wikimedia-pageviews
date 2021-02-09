@@ -52,7 +52,13 @@ namespace WikimediaData.Data
 
         public string GetDomainNameByCode(string code)
         {
-            return domains.SingleOrDefault(d => d.Code.Equals(code))?.Name;
+            string[] domainParts = code.Split('.');
+            string domainCode = "";
+
+            if (domainParts.Length > 1)
+                domainCode = domainParts[1]; //get domain from format documentation
+
+            return domains.SingleOrDefault(d => d.Code.Equals(domainCode))?.Name;
         }
 
         public string GetLanguage(string code)

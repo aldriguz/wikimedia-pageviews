@@ -10,17 +10,14 @@ namespace WikimediaData.Core
     public static class ConsoleReport
     {
         const string LanguageDomainHeader = "\t Period \t Language \t Domain \t ViewCount";
-        //const string LanguageDomainLineTemplate = "{0} \t {1} \t {2} \t {3}";
-
-        const string LanguagePageMaxViewHeader = "Period \t Page \t ViewCount";
-        //const string LanguagePageMaxViewTemplate = "{0} \t {1} \t {2}";
+        const string LanguagePageMaxViewHeader = "\t Period \t Page \t\t ViewCount";
 
         public static void DisplayLanguageDomainCount(LanguageDomainReport report)
         {
-            Console.WriteLine("Language & Domain count");
+            Console.WriteLine("\n -Language & Domain count");
             Console.WriteLine(LanguageDomainHeader);
 
-            foreach(LanguageDomain item in report.Data)
+            foreach(LanguageDomain item in report.Data.OrderByDescending(l => l.Period))
             {
                 Console.WriteLine(item.ToString());
             }
@@ -29,10 +26,10 @@ namespace WikimediaData.Core
 
         public static void DisplayLanguagePageMaxCount(LanguagePageReport report)
         {
-            Console.WriteLine("Language page max view count");
+            Console.WriteLine("\n -Language page max view count");
             Console.WriteLine(LanguagePageMaxViewHeader);
 
-            foreach (LanguagePage item in report.Data)
+            foreach (LanguagePage item in report.Data.OrderByDescending(l => l.Period))
             {
                 Console.WriteLine(item.ToString());
             }

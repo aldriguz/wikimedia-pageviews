@@ -9,7 +9,6 @@ namespace WikimediaData.Interfaces
         Domain GetDomainByCode(string code);
         string GetDomainNameByCode(string code);
         Domain GetDomainById(int id);
-
         string GetLanguage(string code);
     }
 }

@@ -11,7 +11,7 @@ namespace WikimediaData.Entities
 
         public override string ToString()
         {
-            return string.Concat("\t", this.Period.ToString("yyyyMMdd"), "\t", this.LanguageCode, "\t", this.Domain, "\t", this.ViewCount);
+            return string.Concat("\t", this.Period.ToString("yyyyMMdd"), "\t ", this.LanguageCode, "\t\t", this.Domain, "\t", this.ViewCount);
         }
     }
 }

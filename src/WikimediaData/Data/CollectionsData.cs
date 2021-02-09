@@ -20,7 +20,7 @@ namespace WikimediaData.Data
         public LanguageDomain GetLanguageAndDomainCount(PageViewCollection periodCollection)
         {
             LanguageDomain report = new LanguageDomain();
-            
+
             var entry = periodCollection.Data.Where(e => e.ViewCount > 0)
                 .GroupBy(x => x.DomainCode)
                 .Select(y => new PageViewEntry
@@ -52,7 +52,7 @@ namespace WikimediaData.Data
                 .OrderByDescending(x => x.ViewCount)
                 .FirstOrDefault();
 
-            report.Page = domainData.GetDomainNameByCode(entry.DomainCode); //domain
+            report.Page = entry.PageTitle; //page tittle
             report.ViewCount = entry.ViewCount;
 
             return report;

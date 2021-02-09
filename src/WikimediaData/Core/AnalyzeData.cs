@@ -69,22 +69,26 @@ namespace WikimediaData.Core
                     PageViewCollection periodCollection = fr.GetDataToCollection();
 
                     //First report
+                    Console.WriteLine("\tProcessing language and domain data for period " + startPeriod.ToShortDateString());
                     LanguageDomain languageDomain = processData.GetLanguageAndDomainCount(periodCollection);
                     languageDomain.Period = startPeriod;
                     firstReport.AddLanguageDomain(languageDomain);
 
                     //Second report
                     LanguagePage languagePage = processData.GetLanguagePageCount(periodCollection);
+                    Console.WriteLine("\tProcessing language page data for period " + startPeriod.ToShortDateString());
                     languagePage.Period = startPeriod;
                     secondReport.AddLanguagePage(languagePage);
                 }
 
                 startPeriod = startPeriod.AddDays(Config.OperatorBackDays);
-
             }
             while (startPeriod.CompareTo(endPeriod) != 0);
 
+
             //Report the results
+            Console.Clear();
+
             ConsoleReport.DisplayLanguageDomainCount(firstReport);
             ConsoleReport.DisplayLanguagePageMaxCount(secondReport);
         }

@@ -7,3 +7,7 @@ C:\Users\User\Documents\GitHub\wikimedia-pageviews\src\WikimediaData\obj\Debug\W
 C:\Users\User\Documents\GitHub\wikimedia-pageviews\src\WikimediaData\obj\Debug\WikimediaData.exe
 C:\Users\User\Documents\GitHub\wikimedia-pageviews\src\WikimediaData\obj\Debug\WikimediaData.pdb
 C:\Users\User\Documents\GitHub\wikimedia-pageviews\src\WikimediaData\obj\Debug\WikimediaData.csprojAssemblyReference.cache
+C:\Users\User\Documents\GitHub\wikimedia-pageviews\src\WikimediaData\bin\Debug\WikimediaData.exe.manifest
+C:\Users\User\Documents\GitHub\wikimedia-pageviews\src\WikimediaData\bin\Debug\WikimediaData.application
+C:\Users\User\Documents\GitHub\wikimedia-pageviews\src\WikimediaData\obj\Debug\WikimediaData.exe.manifest
+C:\Users\User\Documents\GitHub\wikimedia-pageviews\src\WikimediaData\obj\Debug\WikimediaData.application

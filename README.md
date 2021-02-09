@@ -1,6 +1,6 @@
 # wikimedia-pageviews
 
-This project challenge has been made as a thecnial challenge, this is a console app.
+This project challenge has been made as a technical challenge, this is a console app.
 
 ## Source
 

@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using WikimediaData;
+using WikimediaData.Core;
 using WikimediaData.FileLib;
 
 namespace WikimediaData
@@ -14,7 +15,11 @@ namespace WikimediaData
     {
         static void Main(string[] args)
         {
-            ProcessTest();
+            DateTime currentPeriod = DateTime.Now.ToUniversalTime();
+            int lastDaysNumber = 5;
+            AnalyzeData dataProcessor = new AnalyzeData(lastDaysNumber, currentPeriod);
+            dataProcessor.RunMainProcess();
+            //ProcessTest();
         }
 
         public static void ProcessTest()

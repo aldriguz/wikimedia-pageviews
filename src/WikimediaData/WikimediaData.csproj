@@ -56,7 +56,9 @@
     <Compile Include="Core\AnalyzeData.cs" />
     <Compile Include="Core\ConsoleReport.cs" />
     <Compile Include="Data\CollectionsData.cs" />
+    <Compile Include="Data\InMemoryDomainData.cs" />
     <Compile Include="Entities\Config.cs" />
+    <Compile Include="Entities\Domain.cs" />
     <Compile Include="Entities\Enums\EnumDomain.cs" />
     <Compile Include="Entities\LanguageDomain.cs" />
     <Compile Include="Entities\LanguageDomainReport.cs" />
@@ -67,7 +69,11 @@
     <Compile Include="Data\PageViewsRawData.cs" />
     <Compile Include="Interfaces\ICompression.cs" />
     <Compile Include="Interfaces\IDataProvider.cs" />
+    <Compile Include="Interfaces\IDomainData.cs" />
+    <Compile Include="Interfaces\IDataReader.cs" />
+    <Compile Include="Interfaces\IPageViewRule.cs" />
     <Compile Include="Library\Compression\GZip.cs" />
+    <Compile Include="Library\FileFormat\FileReader.cs" />
     <Compile Include="Other\DataRaw.cs" />
     <Compile Include="Other\Download.cs" />
     <Compile Include="Library\FileFormat\FileProvider.cs" />

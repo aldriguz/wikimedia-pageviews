@@ -26,20 +26,23 @@ namespace WikimediaData.Data
 
 
         #region Download data
-        public void DownloadAllPeriodsData(DateTime startPeriod, DateTime endPeriod)
+        public void DownloadAllPeriodsData(DateTime startPeriod, DateTime endPeriod, string directoryName)
         {
-            //DateTime endPeriod = startPeriod.AddDays(LastNumberDays * Config.OperatorBackDays);
             do 
             {
-                DownloadByPeriod(startPeriod);
+                DownloadByPeriod(startPeriod, directoryName);
                 startPeriod = startPeriod.AddDays(Config.OperatorBackDays);
 
-            } while (!startPeriod.Equals(endPeriod));
+            } 
+            while (startPeriod.CompareTo(endPeriod) != 0);
+
+            Console.WriteLine("All files from wikimedia has been downloaded.");
         }
         
-        public void DownloadByPeriod(DateTime period)
+        private void DownloadByPeriod(DateTime period, string directoryName)
         {
-            DataProvider.SetConfigurationByPeriod(period);
+            DataProvider.SetConfigurationByPeriod(period, directoryName);
+            DataProvider.VerifyDataTempLocation();
             DataProvider.DownloadData();
         }
         #endregion
@@ -53,6 +56,8 @@ namespace WikimediaData.Data
             {
                 Compresor.Decompress(fileToDecompress);
             }
+
+            Console.WriteLine("All files has been decompress.");
         }
         #endregion
     }

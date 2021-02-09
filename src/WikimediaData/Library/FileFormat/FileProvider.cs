@@ -9,17 +9,19 @@ namespace WikimediaData.Library.FileFormat
 {
     public class FileProvider : IDataProvider
     {
-        private string TargetPath;
+        private string TargetFile;
+        private string TargetFileNoExt; //file with no extension
         private string SourceUrl;
+        private string TargetDirectory;
 
-        public void VerifyDataTempLocation(string path)
+        public void VerifyDataTempLocation()
         {
-            if (string.IsNullOrEmpty(path))
+            if (string.IsNullOrEmpty(TargetDirectory))
                 throw new ArgumentNullException("Ooops! Folder name is needed to process the data");
 
-            if (!Directory.Exists(path))
+            if (!Directory.Exists(TargetDirectory))
             {
-                Directory.CreateDirectory(path);
+                Directory.CreateDirectory(TargetDirectory);
             }
 
         }
@@ -29,19 +31,25 @@ namespace WikimediaData.Library.FileFormat
         }
         public void DownloadData()
         {
+            Console.WriteLine(string.Concat("Downloading file ", this.TargetFile, "..."));
+
             using (WebClient wc = new WebClient())
             {
-                wc.DownloadFile(new Uri(this.SourceUrl), this.TargetPath);
+                wc.DownloadFile(new Uri(this.SourceUrl), this.TargetFile);
             }
         }
-        public void SetConfigurationByPeriod(DateTime period)
-        {
+        public void SetConfigurationByPeriod(DateTime period, string folderName)
+        {            
             string year = period.Year.ToString();
             string month = period.ToString("MM");
             string formatedDate = period.ToString("yyyyMMdd");
+            string targetFileName = String.Format(Config.FileNameTemplate, formatedDate, Config.LastDayHourReport);
+            string targetFileNameNoExt = String.Format(Config.FileNameRawTemplate, formatedDate, Config.LastDayHourReport);
 
             this.SourceUrl = String.Format(Config.PageViewBaseUrlTemplate, year, year, month, formatedDate, Config.LastDayHourReport);
-            this.TargetPath = String.Format(Config.FileNameTemplate, formatedDate, Config.LastDayHourReport);
+            this.TargetFile = string.Concat(folderName, "\\", targetFileName);
+            this.TargetFileNoExt = string.Concat(folderName, "\\", targetFileNameNoExt);
+            this.TargetDirectory = folderName;
         }
         
         #region async 
@@ -51,7 +59,7 @@ namespace WikimediaData.Library.FileFormat
             {
                 wc.DownloadProgressChanged += OnDownloadProgressChanged;
                 wc.DownloadFileCompleted += OnDownloadFileCompleted;
-                wc.DownloadFileAsync(new Uri(this.SourceUrl), this.TargetPath); //here private 
+                wc.DownloadFileAsync(new Uri(this.SourceUrl), this.TargetFile); //here private 
             }
         }
         private void OnDownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
@@ -69,46 +77,14 @@ namespace WikimediaData.Library.FileFormat
         }
         #endregion
 
-        #region read data
-        public PageViewCollection GetDataToCollection(DateTime period)
-        {
-            PageViewCollection fileData = new PageViewCollection();
-            string fullFilePath = String.Format(Config.TempFolderPath, period.Ticks.ToString(), "\\");
-
-            using (FileStream fs = File.Open(fullFilePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-            using (BufferedStream bs = new BufferedStream(fs))
-            using (StreamReader sr = new StreamReader(bs))
-            {
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    fileData.AddPageView(GetEntry(line));
-                }
-            }
-
-            return fileData;
-        }
-
-        private PageViewEntry GetEntry(string line)
-        {
-            PageViewEntry entry = new PageViewEntry();
-            //domainCode pageTitle viewCount responseSize
-            string[] data = line.Split(' ');
-            
-            entry.DomainCode = data[0];
-            entry.PageTitle = data[1];
-            entry.ViewCount = Convert.ToUInt32(data[2]);
-            entry.ResponseSize = Convert.ToUInt32(data[3]);
-
-            return entry;
-        }
-
-        #endregion
-
         #region other methods
         public string GetDataPath(DateTime period)
         {
             return string.Concat(Config.TempFolderPath, period.Ticks.ToString());
+        }
+        public string GetTargetFileNoExt()
+        {
+            return this.TargetFileNoExt;
         }
         #endregion
     }

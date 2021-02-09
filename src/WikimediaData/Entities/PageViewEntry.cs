@@ -10,7 +10,7 @@ namespace WikimediaData.Entities
     {
         public string DomainCode { get; set; }
         public string PageTitle { get; set; }
-        public uint ViewCount { get; set; }
-        public uint ResponseSize { get; set; }
+        public uint ViewCount { get; set; } //max value 4200M
+        //public ushort ResponseSize { get; set; }//max value ~32K
     }
 }

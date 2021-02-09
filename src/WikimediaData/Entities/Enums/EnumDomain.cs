@@ -1,4 +1,5 @@
 ﻿using System.Runtime.Serialization;
+using System.ComponentModel;
 
 namespace WikimediaData.Entities.Enums
 {
@@ -6,6 +7,7 @@ namespace WikimediaData.Entities.Enums
     public enum EnumDomain
     {
         [EnumMember(Value = "")]
+        [Description()]
         wiki,
         
         [EnumMember(Value = "b")]

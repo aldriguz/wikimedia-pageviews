@@ -8,5 +8,10 @@ namespace WikimediaData.Entities
         public string LanguageCode { get; set; }
         public string Domain { get; set; }
         public uint ViewCount { get; set; }
+
+        public override string ToString()
+        {
+            return string.Concat("\t", this.Period.ToString("yyyyMMdd"), "\t", this.LanguageCode, "\t", this.Domain, "\t", this.ViewCount);
+        }
     }
 }

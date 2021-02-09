@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WikimediaData.Entities
 {
-    public class PageViewCollection
+    public class PageViewCollection : IDisposable
     {
         public List<PageViewEntry> Data;
         private DateTime? PeriodDate;
@@ -41,6 +41,11 @@ namespace WikimediaData.Entities
         {
             if (this.Data != null)
                 this.Data.Add(entry);
+        }
+
+        public void Dispose()
+        {
+            this.Data = null;
         }
     }
 }

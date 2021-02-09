@@ -7,12 +7,16 @@ namespace WikimediaData.Compression
 {
     public class GZip : ICompression
     {
-        
         public void Decompress(FileInfo fileToDecompress)
         {
+            
+
             using (FileStream originalFileStream = fileToDecompress.OpenRead())
             {
                 string currentFileName = fileToDecompress.FullName;
+
+                Console.WriteLine(string.Concat("Decompressing file ", currentFileName, "..."));
+
                 string newFileName = currentFileName.Remove(currentFileName.Length - fileToDecompress.Extension.Length);
 
                 using (FileStream decompressedFileStream = File.Create(newFileName))
@@ -32,12 +36,12 @@ namespace WikimediaData.Compression
 
         public string GetFileExtension()
         {
-            return "gzip";
+            return "gz";
         }
 
         public string GetFileExtensionPattern()
         {
-            return "*.gzip";
+            return "*.gz";
         }
     }
 }
